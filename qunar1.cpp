@@ -1,3 +1,6 @@
+/*
+二分查找
+*/
 #include<iostream>
 using namespace std;
 int binary_search(int L[10],int key);

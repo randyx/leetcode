@@ -2,17 +2,15 @@ int findMin(int num[], int n) {
     int min=0;
     int max=n-1;
     int mid;
-    int result;
-    while(min<=max){
+    while(min<max){
         mid=(min+max)/2;
-        if(num[min]<=num[mid]&&num[mid]<=num[max]){
-            result=min;
+        if(num[min]<=num[max]){
             break;
         }
-       else if(num[min]<=num[mid]&&num[mid]>=num[max])/*右边*/
+        if(num[min]<=num[mid])
            min=mid+1;
-       else if(num[min]>=num[mid]&&num[mid]<=num[max])
+        else
            max=mid;
     }
-    return num[result];
+    return num[min];
 }
